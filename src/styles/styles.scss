@@ -1,0 +1,29 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+@import "./typography.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+//flex classes
+.flex-space-between {
+  @include flex(row, space-between, center);
+}
+.flex-center {
+  @include flex(row, center, center);
+}
+.flex-center-col {
+  @include flex(column, center, center);
+}
+
+//container
+.max-container {
+  margin: 0px auto;
+  max-width: 1440px;
+}

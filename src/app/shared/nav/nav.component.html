@@ -1,0 +1,27 @@
+<nav class="flex-space-between max-container">
+  <div class="flex-space-between">
+    <!-- logo -->
+    <img src="../../../assets/Logo.png" alt="linkdev logo" width="110 px" />
+    <!-- Burger Menu -->
+    <div id="burger-menu" (click)="toggleMenu()">
+      <span></span>
+    </div>
+  </div>
+
+  <ul class="flex-space-between nav-pages">
+    <li><a routerLink="" routerLinkActive="active">Home</a></li>
+    <li><a routerLink="about" routerLinkActive="active">About us</a></li>
+    <li><a routerLink="news" routerLinkActive="active">News</a></li>
+    <li>
+      <a routerLink="contact-us" routerLinkActive="active">Contact us</a>
+    </li>
+  </ul>
+  <div class="nav-buttons">
+    <button>Login</button>
+    <button>Sign Up</button>
+    <select name="lang" id="lang">
+      <option value="En">En</option>
+      <option value="Ar">ع</option>
+    </select>
+  </div>
+</nav>
