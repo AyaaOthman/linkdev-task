@@ -1,0 +1,33 @@
+.shape {
+  position: absolute;
+  z-index: -1;
+  top: -298.8358154296875px;
+  left: 800px;
+  height: 912px;
+  svg {
+    width: 120%;
+  }
+}
+.header-img {
+  top: 65px;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.circle:hover {
+  scale: 1.2;
+}
+.dotted-line {
+  border-top: 4px dotted #000;
+  width: 80px;
+}
+.img-container {
+  width: clamp(350px, 50%, 670px);
+}
+.text-container {
+  width: clamp(350px, 50%, 670px);
+}

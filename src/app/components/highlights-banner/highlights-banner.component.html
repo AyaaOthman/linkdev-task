@@ -1,1 +1,7 @@
-<p>highlights-banner works!</p>
+<section class="max-container" *ngIf="slides.length > 0">
+  <app-banner-slide
+    [next]="next"
+    [slides]="slides"
+    (click)="nextSlide(next)"
+  ></app-banner-slide>
+</section>
