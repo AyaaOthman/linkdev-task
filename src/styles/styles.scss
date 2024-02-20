@@ -18,6 +18,10 @@ a {
 .flex-center {
   @include flex(row, center, center);
 }
+.flex-justify-center {
+  @include flex(row, start, center);
+  gap: 44px;
+}
 .flex-center-col {
   @include flex(column, center, center);
 }
@@ -26,4 +30,58 @@ a {
 .max-container {
   margin: 0px auto;
   max-width: 1440px;
+}
+//padding
+.px-2 {
+  padding: 0 2rem;
+}
+.pr-6 {
+  padding-right: 6rem;
+}
+.my-1 {
+  margin: 1rem 0rem;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.mb-2 {
+  margin-bottom: 2rem;
+}
+.mr-4 {
+  margin-right: 4rem;
+}
+//buttons
+.btn-orange {
+  padding: 1rem 2rem;
+  background: $orange-color;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-right: 5px;
+  font-family: "Poppins";
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.btn-noBorder {
+  padding: 1rem 2rem;
+  background: none;
+  color: $grey;
+  border: none;
+  font-family: "Poppins";
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  font-size: 18px;
+}
+.btn-orange:hover {
+  scale: 1.05;
+}
+
+#circle-1 {
+  background: $purple-color;
+}
+#circle-2 {
+  background: $green-color;
+}
+#circle-3 {
+  background: $orange-color;
 }
