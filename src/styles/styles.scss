@@ -7,6 +7,7 @@
   padding: 0;
   box-sizing: border-box;
   list-style: none;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -17,6 +18,9 @@ a {
 }
 .flex-center {
   @include flex(row, center, center);
+}
+.flex-center-start {
+  @include flex(row, center, start);
 }
 .flex-justify-center {
   @include flex(row, start, center);

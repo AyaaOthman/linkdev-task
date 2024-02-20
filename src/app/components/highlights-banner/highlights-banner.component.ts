@@ -35,7 +35,6 @@ export class HighlightsBannerComponent {
           if (x > y) return 1;
           return 0;
         });
-        console.log(this.slides);
       },
       error: (err) => console.log(err),
     });
@@ -47,7 +46,6 @@ export class HighlightsBannerComponent {
       index = 0;
     }
     this.next = index;
-    console.log(this.next);
   }
   ngOnInit() {
     this.getBannerContent();

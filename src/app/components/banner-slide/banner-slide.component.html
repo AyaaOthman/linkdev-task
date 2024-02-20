@@ -1,4 +1,4 @@
-<div class="flex-center mr-4">
+<div class="flex-center-start mr-4" id="banner">
   <div class="shape">
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -18,10 +18,15 @@
       </g>
     </svg>
   </div>
-  <div class="px-2">
-    <h3 class="poppins-bold-20 orange">{{ slides[next].category }}</h3>
+  <div class="px-2 text-container" [id]="next">
+    <h3
+      class="poppins-bold-20"
+      [ngClass]="next === 0 ? 'orange' : next === 1 ? 'green' : 'purple'"
+    >
+      {{ slides[next].category }}
+    </h3>
     <h1
-      class="volkhov-bold-70 dark-blue my-1"
+      class="volkhov-bold-65 dark-blue my-1"
       [ngClass]="next === 0 ? 'pr-6' : ''"
     >
       {{ slides[next].title }}
@@ -47,15 +52,27 @@
       </div>
     </div>
     <div class="flex-justify-center">
-      <div class="circle" id="circle-1"></div>
-      <div class="circle" id="circle-2"></div>
-      <div class="circle" id="circle-3"></div>
+      <div class="circle" id="circle-1" (click)="getSlide(2)">
+        <a routerLink="#2"></a>
+      </div>
+      <div class="dotted-line"></div>
+
+      <div class="circle" id="circle-2" (click)="getSlide(1)">
+        <a routerLink="#1"></a>
+      </div>
+      <div class="dotted-line"></div>
+
+      <div class="circle" id="circle-3" (click)="getSlide(0)">
+        <a routerLink="#0"></a>
+      </div>
     </div>
   </div>
-
-  <img
-    src="../../../assets/{{ slides[next].order }}.png"
-    alt="header-img"
-    class="header-img mr-4"
-  />
+  <div class="img-container">
+    <img
+      src="../../../assets/{{ slides[next].order }}.png"
+      alt="header-img"
+      class="header-img mr-4"
+      height="500px"
+    />
+  </div>
 </div>

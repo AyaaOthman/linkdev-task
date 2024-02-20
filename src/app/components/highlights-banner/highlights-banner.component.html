@@ -1,3 +1,7 @@
-<section (click)="nextSlide(next)" class="max-container">
-  <app-banner-slide [next]="next" [slides]="slides"></app-banner-slide>
+<section class="max-container" *ngIf="slides.length > 0">
+  <app-banner-slide
+    [next]="next"
+    [slides]="slides"
+    (click)="nextSlide(next)"
+  ></app-banner-slide>
 </section>

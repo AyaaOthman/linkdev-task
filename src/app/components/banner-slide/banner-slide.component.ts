@@ -21,4 +21,8 @@ export class BannerSlideComponent {
     videoUrl: string;
     colorCode: string;
   }[] = [];
+  getSlide(n: number) {
+    this.next = n;
+    console.log(this.next);
+  }
 }
