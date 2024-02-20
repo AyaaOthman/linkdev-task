@@ -7,7 +7,6 @@
   padding: 0;
   box-sizing: border-box;
   list-style: none;
-  overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -21,6 +20,9 @@ a {
 }
 .flex-center-start {
   @include flex(row, center, start);
+}
+.flex-start-end {
+  @include flex(row, start, end);
 }
 .flex-justify-center {
   @include flex(row, start, center);
@@ -39,6 +41,9 @@ a {
 .px-2 {
   padding: 0 2rem;
 }
+.px-4 {
+  padding: 0 4rem;
+}
 .pr-6 {
   padding-right: 6rem;
 }
@@ -53,6 +58,12 @@ a {
 }
 .mr-4 {
   margin-right: 4rem;
+}
+.py-4 {
+  padding: 4rem 0rem;
+}
+.py-1 {
+  padding: 1rem 0rem;
 }
 //buttons
 .btn-orange {
@@ -88,4 +99,33 @@ a {
 }
 #circle-3 {
   background: $orange-color;
+}
+//colors
+//colors
+.orange {
+  color: $orange-color;
+}
+.green {
+  color: $green-color;
+}
+.purple {
+  color: $purple-color;
+}
+.dark-blue {
+  color: $dark-blue;
+}
+.grey {
+  color: $grey;
+}
+.white {
+  color: white;
+}
+.blueish {
+  color: $blueish;
+}
+.bg-grey {
+  background-color: #efefef;
+}
+.bg-purple {
+  background-color: $purple-color;
 }

@@ -1,0 +1,20 @@
+.product-card {
+  width: 200px;
+  height: 200px;
+  background: #181e4b;
+  overflow: hidden;
+}
+img {
+  position: relative;
+
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  opacity: 0.5;
+}
+h4 {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 50;
+}

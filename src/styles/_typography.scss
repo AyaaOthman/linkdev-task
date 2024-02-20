@@ -6,6 +6,21 @@
   font-weight: bold;
   font-size: 20px;
 }
+.poppins-bold-50 {
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 50px;
+}
+.poppins-extrabold-16 {
+  font-family: "Poppins";
+  font-weight: bolder;
+  font-size: 16px;
+}
+.sans-reg-20 {
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+}
 .poppins-medium-16 {
   font-family: "Poppins";
   font-weight: 400;
@@ -15,21 +30,4 @@
   font-family: "Volkhov";
   font-weight: bold;
   font-size: 65px;
-}
-
-//colors
-.orange {
-  color: $orange-color;
-}
-.green {
-  color: $green-color;
-}
-.purple {
-  color: $purple-color;
-}
-.dark-blue {
-  color: $dark-blue;
-}
-.grey {
-  color: $grey;
 }
