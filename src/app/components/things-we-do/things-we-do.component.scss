@@ -1,0 +1,39 @@
+.card-col-2 {
+  margin-top: 62px;
+}
+.card-col-3 {
+  margin-top: -62px;
+}
+.text-container {
+  width: 150%;
+  height: 460px;
+  position: relative;
+  z-index: 0;
+  margin-right: 5rem;
+  // padding: 2rem 0rem 0rem 10rem;
+  h2 {
+    padding: 1rem 6rem;
+    // margin-left: 14rem;
+  }
+  p {
+    padding-left: 3rem;
+  }
+}
+.img-container {
+  position: relative;
+  z-index: 1;
+  right: -200px;
+}
+.bg-placeholder {
+  width: 400px;
+}
+section {
+  position: relative;
+  .section-shadow-text {
+    position: absolute;
+    top: 0;
+    left: -25px;
+    text-shadow: 1px -10px 1px #ffffff09;
+    width: 100px;
+  }
+}

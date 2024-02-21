@@ -1,1 +1,44 @@
-<p>things-we-do works!</p>
+<section class="max-container px-4 bg-grey">
+  <p class="section-shadow-text poppins-bold-75 white">Things We Do</p>
+  <div class="flex-center-start py-4">
+    <div class="flex-center img-container">
+      <div class="card-col-1">
+        <app-products-card
+          [imgCard]="1"
+          [text]="'Transformation'"
+        ></app-products-card>
+      </div>
+      <div class="flex-center-col card-col-2">
+        <app-products-card
+          [imgCard]="2"
+          [text]="'Envision'"
+        ></app-products-card>
+        <app-products-card
+          [imgCard]="3"
+          [text]="'Dynamic 365'"
+        ></app-products-card>
+      </div>
+      <div class="flex-center-col card-col-3">
+        <app-products-card
+          [imgCard]="4"
+          [text]="'Crafty Mind'"
+        ></app-products-card>
+        <app-products-card
+          [imgCard]="5"
+          [text]="'Services'"
+        ></app-products-card>
+      </div>
+    </div>
+    <div class="bg-purple text-container flex-center">
+      <div class="bg-purple bg-placeholder"></div>
+      <div class="flex-center-col">
+        <h2 class="poppins-bold-50 blueish">We Deliver Digital Products</h2>
+        <p class="sans-reg-20 white">
+          We craft technology solutions that digitally bond and transform the
+          productivity of our customers and citizens , workers,
+          consumers,partners
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
