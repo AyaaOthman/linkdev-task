@@ -1,0 +1,32 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  .logo-about {
+    width: 200px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    img {
+      width: 150px;
+      margin-left: -50px;
+    }
+  }
+  li,
+  h5 {
+    padding: 0.5rem 1rem;
+  }
+  a {
+    color: grey;
+  }
+  .pages-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+}
