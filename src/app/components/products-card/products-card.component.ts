@@ -9,4 +9,5 @@ import { Component, Input } from '@angular/core';
 })
 export class ProductsCardComponent {
   @Input() imgCard: number = 1;
+  @Input() text: string = '';
 }
