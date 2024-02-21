@@ -4,7 +4,11 @@
     <h2 class="volkhov-bold-50 py-1">Top News</h2>
     <div class="flex-center">
       <button class="btn-grey active">All News</button>
-      <button *ngFor="let category of allCategories" class="btn-grey">
+      <button
+        *ngFor="let category of allCategories"
+        class="btn-grey"
+        (click)="getNewsByCategory(category.name)"
+      >
         {{ category.name }}
       </button>
     </div>

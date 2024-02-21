@@ -22,7 +22,6 @@ export class NewsCardComponent {
     showOnHomepage: 'yes',
     description: '',
   };
-  ngOnInit() {
-    console.log('this is news', this.news);
-  }
+
+  ngOnInit() {}
 }

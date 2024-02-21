@@ -4,6 +4,7 @@ import { Category, News } from '../../interfaces/news';
 import { CommonModule } from '@angular/common';
 import { NewsCardComponent } from '../news-card/news-card.component';
 
+type TobjectCategory = { [id: number]: string };
 @Component({
   selector: 'app-latest-news',
   standalone: true,
@@ -14,17 +15,24 @@ import { NewsCardComponent } from '../news-card/news-card.component';
 export class LatestNewsComponent {
   constructor(private content: ContentService) {}
   addToHomeNews: News[] = [];
+  originalNews: News[] = [];
   allNews: News[] = [];
   allCategories: Category[] = [];
+  category: TobjectCategory = {};
   getAllNews() {
     this.content.allNews().subscribe({
       next: (res) => {
-        console.log(res);
         this.allNews = res.News;
+        this.allNews = this.allNews.map((news) => {
+          return {
+            ...news,
+            categoryName: this.category[+news.categoryID as number],
+          };
+        });
         this.addToHomeNews = this.allNews.filter(
           (news) => news.showOnHomepage === 'yes'
         );
-        console.log('homeNews', this.addToHomeNews);
+        this.originalNews = this.addToHomeNews;
       },
       error: (err) => {
         console.log(err);
@@ -35,16 +43,28 @@ export class LatestNewsComponent {
     this.content.allCategories().subscribe({
       next: (res) => {
         this.allCategories = res.newsCategory;
-
-        console.log(res);
+        this.category = res.newsCategory.reduce(
+          (acc: TobjectCategory, current: Category) => {
+            acc[current.id] = current.name;
+            return acc;
+          },
+          {}
+        );
+        this.getAllNews();
       },
       error: (err) => {
         console.log(err);
       },
     });
   }
+  getNewsByCategory(category: string) {
+    const categorizedNews = this.originalNews.filter(
+      (news) => news.categoryName === category
+    );
+    this.addToHomeNews = categorizedNews;
+  }
+
   ngOnInit() {
-    this.getAllNews();
     this.getAllCategories();
   }
 }

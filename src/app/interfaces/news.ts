@@ -7,6 +7,7 @@ export interface News {
   description: string;
   publishedDate: string;
   showOnHomepage: string;
+  categoryName?: string;
 }
 export interface Category {
   id: number;
