@@ -29,7 +29,6 @@ a {
 }
 .flex-justify-center {
   @include flex(row, start, center, wrap);
-  gap: 44px;
 }
 .flex-start-start {
   @include flex(row, start, flex-start, wrap);

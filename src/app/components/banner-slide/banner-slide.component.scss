@@ -10,6 +10,7 @@
 }
 .header-img {
   top: 65px;
+  max-height: 500px;
 }
 
 .circle {
@@ -30,4 +31,15 @@
 }
 .text-container {
   width: clamp(350px, 50%, 670px);
+}
+#play-btn {
+  margin-left: 10px;
+}
+
+#banner {
+  @media (max-width: 991.98px) {
+    flex-direction: column;
+    align-items: center;
+    flex-flow: column-reverse;
+  }
 }
