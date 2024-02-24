@@ -15,9 +15,6 @@
     padding: 1rem 6rem;
     // margin-left: 14rem;
   }
-  p {
-    padding-left: 3rem;
-  }
 }
 .img-container {
   position: relative;
@@ -50,6 +47,12 @@ section {
   }
   .text-container {
     width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+
+    p {
+      padding: 0.5rem;
+    }
   }
   .img-container {
     right: 0;

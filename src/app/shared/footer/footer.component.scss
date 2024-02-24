@@ -30,3 +30,8 @@ footer {
     gap: 20px;
   }
 }
+@media (max-width: 991.98px) {
+  footer {
+    justify-content: center;
+  }
+}
